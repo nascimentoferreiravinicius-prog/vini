@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CultivaEconomia - Agricultura Familiar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <header>
+        <div class="header-container">
+            <h1>🌱 CultivaEconomia</h1>
+            <p>Valorizando a agricultura familiar e ajudando o seu bolso de forma consciente.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="card sobre">
+            <h2>Por que escolher a Agricultura Familiar?</h2>
+            <p>Comprar diretamente de pequenos produtores elimina a extensa cadeia de intermediários (como grandes redes varejistas e distribuidores). Isso gera um ciclo positivo que se resume em dois grandes pilares:</p>
+            <ul>
+                <li><strong>Mais saúde na mesa:</strong> Alimentos que viajam distâncias menores, colhidos maduros, mais frescos e frequentemente produzidos de forma agroecológica ou com menos insumos químicos.</li>
+                <li><strong>Preço justo de verdade:</strong> O valor que seria diluído entre atravessadores fica com quem planta, permitindo que o consumidor final pague menos e o produtor ganhe mais.</li>
+            </ul>
+        </section>
+
+        <section class="card calculadora">
+            <h2>Simulador de Economia Mensal</h2>
+            <p>Descubra o impacto financeiro estimado ao migrar suas compras regulares de hortifrúti (frutas, legumes e verduras) do supermercado tradicional para as feiras livres e cooperativas locais.</p>
+            
+            <form id="calc-form" onsubmit="event.preventDefault(); calcularEconomia();">
+                <div class="input-group">
+                    <label for="gasto-mercado">Quanto você gasta por mês com hortifrúti no supermercado? (R$)</label>
+                    <input type="number" id="gasto-mercado" placeholder="Ex: 300" required min="1" step="any">
+                </div>
+                
+                <button type="submit">Calcular Minha Economia</button>
+            </form>
+
+            <div id="resultado" class="resultado-box hidden">
+                <h3>📊 Projeção de Economia Estimada:</h3>
+                
+                <div class="metricas-container">
+                    <div class="metrica-item">
+                        <span>Economia Mensal</span>
+                        <strong id="economia-mes">R$ 0,00</strong>
+                    </div>
+                    <div class="metrica-item">
+                        <span>Economia em 1 Ano</span>
+                        <strong id="economia-ano" class="destaque">R$ 0,00</strong>
+                    </div>
+                </div>
+
+                <p class="nota-explicativa">
+                    💡 <strong>Como funciona o cálculo?</strong> Estudos de economia agrícola demonstram que compras diretas em feiras de produtores locais geram uma economia média de até <strong>25%</strong> em comparação aos grandes hipermercados, além de oferecer produtos com maior ciclo de vida útil, minimizando o desperdício doméstico.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CultivaEconomia. Criado com o propósito de fortalecer o pequeno produtor e incentivar o consumo local.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
