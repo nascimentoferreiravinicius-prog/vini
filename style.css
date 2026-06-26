@@ -1,1 +1,224 @@
+/* ==========================================================================
+   RESET & CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f5f7f4; /* Fundo cinza claro com leve tom verde-oliva */
+    color: #2a3b2c; /* Texto verde escuro para legibilidade excelente */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   CABEÇALHO (HEADER)
+   ========================================================================== */
+header {
+    background: linear-gradient(135deg, #2b6139, #173b20); /* Gradiente natural profundo */
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   CARDS DE CONTEÚDO
+   ========================================================================== */
+.card {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(40, 60, 40, 0.04);
+    margin-bottom: 30px;
+    border: 1px solid #eef2ed;
+}
+
+h2 {
+    color: #173b20;
+    margin-bottom: 18px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* Listas */
+ul {
+    margin-top: 15px;
+    padding-left: 22px;
+}
+
+ul li {
+    margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   FORMULÁRIO & INPUTS
+   ========================================================================== */
+.input-group {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2a3b2c;
+    font-size: 1rem;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #dde3dc;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #173b20;
+    background-color: #fafbfa;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #2b6139;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(43, 97, 57, 0.1);
+}
+
+/* Botão de Ação */
+button {
+    background-color: #e67e22; /* Laranja terra para excelente contraste */
+    color: #ffffff;
+    border: none;
+    padding: 16px 28px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(230, 126, 34, 0.2);
+}
+
+button:hover {
+    background-color: #d35400;
+    box-shadow: 0 6px 16px rgba(211, 84, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* ==========================================================================
+   BOX DE RESULTADOS
+   ========================================================================== */
+.resultado-box {
+    margin-top: 35px;
+    padding: 30px;
+    background-color: #f0f7f2; /* Fundo verde sutil */
+    border-left: 5px solid #2b6139;
+    border-radius: 4px 12px 12px 4px;
+}
+
+.metricas-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.metrica-item {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #e1ebe3;
+}
+
+.metrica-item span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #5c7560;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.metrica-item strong {
+    font-size: 1.6rem;
+    color: #2a3b2c;
+    font-weight: 700;
+}
+
+.metrica-item .destaque {
+    color: #2b6139;
+    font-size: 2.1rem;
+}
+
+.nota-explicativa {
+    font-size: 0.92rem;
+    color: #5c7560;
+    border-top: 1px solid #e1ebe3;
+    padding-top: 18px;
+    margin-top: 5px;
+}
+
+/* Classe utilitária para esconder o resultado antes do cálculo */
+.hidden {
+    display: none !important;
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER)
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #708573;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (Telas menores)
+   ========================================================================== */
+@media (max-width: 580px) {
+    .metricas-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .metrica-item {
+        width: 100%;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}
